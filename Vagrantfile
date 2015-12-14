@@ -13,8 +13,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       v.cpus = 2
   end
 
-  config.vm.box = "puppetlabs/ubuntu-14.04-64-puppet"
-  config.vm.hostname = "alarm-demo-host"
   config.vm.define "alarm-demo-host-1", autostart: false do |v|
     v.vm.box = "puppetlabs/ubuntu-14.04-64-puppet"
     v.vm.hostname = "alarm-demo-host-1"
@@ -23,6 +21,11 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "alarm-demo-host-2", autostart: false do |v|
     v.vm.box = "puppetlabs/ubuntu-14.04-64-puppet"
     v.vm.hostname = "alarm-demo-host-2"
+  end
+
+  config.vm.define "alarm-demo-host-3", autostart: false do |v|
+    v.vm.box = "puppetlabs/ubuntu-14.04-64-puppet"
+    v.vm.hostname = "alarm-demo-host-3"
   end
 
 
